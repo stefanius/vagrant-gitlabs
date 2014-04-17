@@ -1,3 +1,6 @@
+#guide: http://blog.bobbyallen.me/2014/01/11/setup-your-own-private-github-server-using-gitlab-and-ubuntu-server-12-04-lts/
+
+
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
@@ -43,12 +46,12 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     vb.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
   end
 
-  config.vm.provision :puppet do |puppet|
-    puppet.manifests_path = "puppet/manifests"
-    puppet.module_path  = "puppet/modules"
-    puppet.manifest_file  = "site.pp"
-    puppet.options = [
-      "--environment development",
-    ]
-  end
+  #config.vm.provision :puppet do |puppet|
+  #  puppet.manifests_path = "puppet/manifests"
+  #  puppet.module_path  = "puppet/modules"
+  #  puppet.manifest_file  = "site.pp"
+  #  puppet.options = [
+  #    "--environment development",
+  #  ]
+  #end
 end
